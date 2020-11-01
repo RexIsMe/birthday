@@ -24,14 +24,16 @@ $('document').ready(function(){
 		$('#bulb_pink').addClass('bulb-glow-pink');
 		$('#bulb_orange').addClass('bulb-glow-orange');
 		$('body').addClass('peach');
-		$(this).fadeOut('slow').delay(5000).promise().done(function(){
-			$('#play').fadeIn('slow');
-		});
+		music();
+		// $(this).fadeOut('slow').delay(5000).promise().done(function(){
+		// 	$('#play').fadeIn('slow');
+		// });
 	});
-	$('#play').click(function(){
+
+	var music = function(){
 		var audio = $('.song')[0];
-        audio.play();
-        $('#bulb_yellow').addClass('bulb-glow-yellow-after');
+		audio.play();
+		$('#bulb_yellow').addClass('bulb-glow-yellow-after');
 		$('#bulb_red').addClass('bulb-glow-red-after');
 		$('#bulb_blue').addClass('bulb-glow-blue-after');
 		$('#bulb_green').addClass('bulb-glow-green-after');
@@ -42,7 +44,10 @@ $('document').ready(function(){
 		$(this).fadeOut('slow').delay(6000).promise().done(function(){
 			$('#bannar_coming').fadeIn('slow');
 		});
-	});
+	};
+
+
+	$('#play').click(music());
 
 	$('#bannar_coming').click(function(){
 		$('.bannar').addClass('bannar-come');
