@@ -17,8 +17,6 @@ $('document').ready(function(){
 		});
 
 	$('#turn_on').click(function(){
-		var audio = $('.song')[0];
-		audio.play();
 		$('#bulb_yellow').addClass('bulb-glow-yellow');
 		$('#bulb_red').addClass('bulb-glow-red');
 		$('#bulb_blue').addClass('bulb-glow-blue');
@@ -30,11 +28,10 @@ $('document').ready(function(){
 			$('#play').fadeIn('slow');
 		});
 	});
-
-	var music = function(){
-		// var audio = $('.song')[0];
-		// audio.play();
-		$('#bulb_yellow').addClass('bulb-glow-yellow-after');
+	$('#play').click(function(){
+		var audio = $('.song')[0];
+        audio.play();
+        $('#bulb_yellow').addClass('bulb-glow-yellow-after');
 		$('#bulb_red').addClass('bulb-glow-red-after');
 		$('#bulb_blue').addClass('bulb-glow-blue-after');
 		$('#bulb_green').addClass('bulb-glow-green-after');
@@ -42,16 +39,10 @@ $('document').ready(function(){
 		$('#bulb_orange').addClass('bulb-glow-orange-after');
 		$('body').css('backgroud-color','#FFF');
 		$('body').addClass('peach-after');
-		// $(this).fadeOut('slow').delay(6000).promise().done(function(){
-		// 	$('#bannar_coming').fadeIn('slow');
-		// });
 		$(this).fadeOut('slow').delay(6000).promise().done(function(){
-			$('#balloons_flying').fadeIn('slow');
+			$('#bannar_coming').fadeIn('slow');
 		});
-	};
-
-
-	$('#play').click(music());
+	});
 
 	$('#bannar_coming').click(function(){
 		$('.bannar').addClass('bannar-come');
