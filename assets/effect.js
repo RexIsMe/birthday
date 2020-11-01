@@ -17,6 +17,8 @@ $('document').ready(function(){
 		});
 
 	$('#turn_on').click(function(){
+		var audio = $('.song')[0];
+		audio.play();
 		$('#bulb_yellow').addClass('bulb-glow-yellow');
 		$('#bulb_red').addClass('bulb-glow-red');
 		$('#bulb_blue').addClass('bulb-glow-blue');
@@ -24,15 +26,14 @@ $('document').ready(function(){
 		$('#bulb_pink').addClass('bulb-glow-pink');
 		$('#bulb_orange').addClass('bulb-glow-orange');
 		$('body').addClass('peach');
-		music();
-		// $(this).fadeOut('slow').delay(5000).promise().done(function(){
-		// 	$('#play').fadeIn('slow');
-		// });
+		$(this).fadeOut('slow').delay(5000).promise().done(function(){
+			$('#play').fadeIn('slow');
+		});
 	});
 
 	var music = function(){
-		var audio = $('.song')[0];
-		audio.play();
+		// var audio = $('.song')[0];
+		// audio.play();
 		$('#bulb_yellow').addClass('bulb-glow-yellow-after');
 		$('#bulb_red').addClass('bulb-glow-red-after');
 		$('#bulb_blue').addClass('bulb-glow-blue-after');
@@ -41,8 +42,11 @@ $('document').ready(function(){
 		$('#bulb_orange').addClass('bulb-glow-orange-after');
 		$('body').css('backgroud-color','#FFF');
 		$('body').addClass('peach-after');
+		// $(this).fadeOut('slow').delay(6000).promise().done(function(){
+		// 	$('#bannar_coming').fadeIn('slow');
+		// });
 		$(this).fadeOut('slow').delay(6000).promise().done(function(){
-			$('#bannar_coming').fadeIn('slow');
+			$('#balloons_flying').fadeIn('slow');
 		});
 	};
 
