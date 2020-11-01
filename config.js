@@ -24,8 +24,8 @@ var config = {
      * Tip: 图片最好用正方形or接近正方形, 看起来效果更好
      */
     imgs: {
-        //"小仙女宝贝": "./imgs/xiaoxiannv1.jpg",
-        "小可爱宝贝": "./imgs/xiaokeai.png",
+        "小仙女宝贝": "./imgs/1.png",
+        //"小可爱宝贝": "./imgs/xiaokeai.png",
         // "今天是你的生日": "./imgs/birthday.jpg",
     },
     // 按钮文字描述, 以下是默认的按钮文字，英文的，您可以改成你喜欢的文字
